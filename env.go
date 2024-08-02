@@ -17,7 +17,7 @@ const (
 
 func open() (registry.Key, error) {
 	return registry.OpenKey(registry.CURRENT_USER, ENVIRONMENT,
-		registry.QUERY_VALUE|registry.READ|registry.WRITE)
+		registry.QUERY_VALUE|registry.SET_VALUE)
 }
 
 func modify(r registry.Key, key string, flags string, remove bool) error {
